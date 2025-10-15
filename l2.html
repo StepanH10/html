@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>L1</title>
+	<style>
+h1 {
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 0;
+  margin-top: 5%;
+}
+table, th, td {
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align:center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h2 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 1px;
+}
+p {
+  text-align: center;
+  font-size: 25px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+	</style>
+</head>
+<body>
+  <!--NADPIS-->
+	<h1><a href="index.html" >Model iso/osi</a></h1>
+ <table style="width: 20%">
+
+    <tr>
+    <th><a  href="l1.html">L1</a></th>
+    <th><a  href="l2.html">L2</a></th>
+    <th><a  href="l3.html">L3</a></th>
+
+  </tr>
+
+
+</table>
+ <!-- KONEC NADPISU-->
+
+<h2>Paralela</h2>
+
+<p>
+  Příkladem připomínajícím vrstvový model ISO/OSI může být dopisová komunikace mezi manažery dvou firem (řekněme české a čínské). Jednotlivé vrstvy obou stran spolu zdánlivě komunikují přímo (stejné vrstvy na obou stranách používají stejný protokol, řeč, způsob prezentace dat), ale ve skutečnosti probíhá komunikace od vyšší vrstvy směrem k nejnižší, která jediná disponuje možností přenosu. Na cílové straně dochází naopak k předávání zprávy od nejnižší vrstvy směrem k vyšším.
+<br><br>
+  Jednotlivé vrstvy mají kontakt (pomocí určitého rozhraní) pouze s prvky v sousedních vrstvách. Rozhraním se myslí např. poštovní schránka mezi 4. a 3. vrstvou nebo přihrádka mezi 3. a 2. vrstvou. Každý prvek na straně odesílatele zpracuje zprávu do takového tvaru (dle daného protokolu), aby jí rozuměl jeho ekvivalent na straně příjemce. Protokol např. udává, jak má být správně nadepsaná adresa 5. vrstvou, nebo jak správně ve 2. vrstvě seskupit více dopisů jdoucích stejným směrem.
+</p>
+
+</body>
+</html>
