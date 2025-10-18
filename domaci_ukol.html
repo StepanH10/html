@@ -11,8 +11,8 @@
     <p>Tato stránka slouží jako cvičení pro rozpoznání zálůadních HTML značek. Vaším ukolem je na základě vizualního vzhledu <b>odvodit</b> použitý kód a strukturu</p>
     <h3>Seznamy</h3>
     <p>Máme dva tipy seznamů:</p>
-    <h3>Neuspořádaný seznam</h3>
-    <br>
+    <h3>Neuspořádaný seznam (značky)</h3>
+    
     <ul>
         <li>Nadpisy (h1-h6) </li>
         <li>Odstavce (p) </li>
@@ -37,22 +37,22 @@
         </tr>
         <tr>
             <td>Odstavec</td>
-            <td>  <p>  </td>
+            <td>  &lt;p&gt; </td>
             <td>Blokový prvek pro text</td>
         </tr>
         <tr>
             <td><b>Tučný text</b></td>
-            <td>  <b> nebo <strong> </td>
+            <td>  &lt;b&gt; nebo &lt;strong&gt; </td>
             <td>Zvýraznění textu</td>
         </tr>
         <tr>
             <td><i>Kurzíva</i></td>
-            <td> <i> nebo <em> </td>
+            <td> &lt;i&gt; nebo &lt;em&gt; </td>
             <td>Seznam bez pořadí</td>
         </tr>
         <tr>
             <td>Řádek tabulky</td>
-            <td> tr </td>
+            <td> &lt;tr&gt; </td>
             <td>Definuje řádek v tabulce.</td>
         </tr>
     <!--konec tabulky-->
@@ -61,9 +61,9 @@
 	<h3>Přihlašovací Formulář (fiktivní) </h3>
 	<form>
         <label for = "name" >Jmeno</label>
-        <input id="name" type="text" >
+        <input id="name" type="text" required>
         <br><br>
-        <label for = "password" >Heslo</label>
+        <label for = "password" >Heslo</label required>
         <input id = "password" type = "password">
         <br><br>
         <label for = "zajmy">zajmy:</label>
@@ -81,6 +81,11 @@
         <br>
         <input id ="Začátečník" type = "radio">
         <label for = "Začátečník">Začátečník</label>
+        <br>
+        <input id ="Pokročilý" type = "radio">
+        <label for = "Pokročilý">Pokročilý</label>
+        <br><br>
+        <input type = "submit" value = "Odeslat">
 
 	</form>
 	
