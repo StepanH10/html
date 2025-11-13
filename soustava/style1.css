@@ -2,25 +2,65 @@ body {
     background: black;
 }
 
-.sun {
+.sunlight {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
     width: 100px;
     height: 100px;
-    background-color: gold;
+    background: radial-gradient(yellow 30%, rgb(241, 78, 2) 100%);
     border-radius: 50%;
 }
+
+.orbitmerk{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: rotate 10s linear infinite
+
+
+}
+
+
 .merk {
     width: 50px;
     height: 50px;
-    background-color: ;
+    background: radial-gradient(circle at 50% 100%, rgb(184, 40, 4) 20%, black 80%);
     border-radius: 50%;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -30%);
      
     
+}
+.zeme {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 50% 100%, rgb(16, 0, 161) 20%, black 80%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -30%);
+    transform: rotate(-30deg);
+    
+}
+
+
+
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
