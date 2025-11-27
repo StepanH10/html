@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozvrh</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>ROZVRH</h1>
+            <p></p>
+        </header>
+
+        <div class="schedule-wrapper">
+            <div class="schedule-grid">
+                <!-- Header Row -->
+                <div class="header-cell time-col">Čas</div>
+                <div class="header-cell">Pondělí</div>
+                <div class="header-cell">Úterý</div>
+                <div class="header-cell">Středa</div>
+                <div class="header-cell">Čtvrtek</div>
+                <div class="header-cell">Pondělí</div>
+
+                <!-- Row 1 -->
+                <div class="time-cell">08:05 - 08:50</div>
+                <div class="subject-cell" data-day="mon" data-time="08:00">CJ</div>
+                <div class="subject-cell" data-day="tue" data-time="08:00">DAT</div>
+                <div class="subject-cell" data-day="wed" data-time="08:00">CJ</div>
+                <div class="subject-cell" data-day="thu" data-time="08:00">ANG</div>
+                <div class="subject-cell" data-day="fri" data-time="08:00">LU</div>
+
+                <!-- Row 2 -->
+                <div class="time-cell">09:00 - 09:45</div>
+                <div class="subject-cell" data-day="mon" data-time="08:55">ANG</div>
+                <div class="subject-cell" data-day="tue" data-time="08:55">DAT</div>
+                <div class="subject-cell" data-day="wed" data-time="08:55">PRG</div>
+                <div class="subject-cell" data-day="thu" data-time="08:55">PRX</div>
+                <div class="subject-cell" data-day="fri" data-time="08:55">EKO</div>
+
+                <!-- Row 3 -->
+                <div class="time-cell">10:05 - 10:50</div>
+                <div class="subject-cell" data-day="mon" data-time="10:00">Physics</div>
+                <div class="subject-cell" data-day="tue" data-time="10:00">Geography</div>
+                <div class="subject-cell" data-day="wed" data-time="10:00">Math</div>
+                <div class="subject-cell" data-day="thu" data-time="10:00">English</div>
+                <div class="subject-cell" data-day="fri" data-time="10:00">Biology</div>
+
+                <!-- Row 4 -->
+                <div class="time-cell">11:00 - 11:45</div>
+                <div class="subject-cell" data-day="mon" data-time="10:55">Chemistry</div>
+                <div class="subject-cell" data-day="tue" data-time="10:55">PE</div>
+                <div class="subject-cell" data-day="wed" data-time="10:55">Art</div>
+                <div class="subject-cell" data-day="thu" data-time="10:55">Math</div>
+                <div class="subject-cell" data-day="fri" data-time="10:55">History</div>
+
+                <!-- Row 5 -->
+                <div class="time-cell">11:55 - 12:40</div>
+                <div class="subject-cell" data-day="mon" data-time="12:30">Biology</div>
+                <div class="subject-cell" data-day="tue" data-time="12:30">Physics</div>
+                <div class="subject-cell" data-day="wed" data-time="12:30">IT</div>
+                <div class="subject-cell" data-day="thu" data-time="12:30">Chemistry</div>
+                <div class="subject-cell" data-day="fri" data-time="12:30">Math</div>
+
+
+                <div class="time-cell">12:45 - 13:30</div>
+                <div class="subject-cell" data-day="mon" data-time="12:30">Biology</div>
+                <div class="subject-cell" data-day="tue" data-time="12:30">Physics</div>
+                <div class="subject-cell" data-day="wed" data-time="12:30">IT</div>
+                <div class="subject-cell" data-day="thu" data-time="12:30">Chemistry</div>
+                <div class="subject-cell" data-day="fri" data-time="12:30">Math</div>
+
+                <div class="time-cell">13:35 - 14:20</div>
+                <div class="subject-cell" data-day="mon" data-time="12:30">Biology</div>
+                <div class="subject-cell" data-day="tue" data-time="12:30">Physics</div>
+                <div class="subject-cell" data-day="wed" data-time="12:30">IT</div>
+                <div class="subject-cell" data-day="thu" data-time="12:30">Chemistry</div>
+                <div class="subject-cell" data-day="fri" data-time="12:30">Math</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Subject</h2>
+            <input type="text" id="subject-input" placeholder="Enter subject name" autocomplete="off">
+            <div class="modal-actions">
+                <button id="cancel-btn" class="btn secondary">Cancel</button>
+                <button id="save-btn" class="btn primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
