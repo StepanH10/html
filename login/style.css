@@ -4,8 +4,8 @@
 }
 
 body{
-    background: black;
-    background:linear-gradient(to bottom, #1B262C 40%, #3282B8 100%)no-repeat fixed;
+    background: url('bck.png') no-repeat center center fixed;
+    background-size: cover;
 }
 .backnadpis{
     width: 100%;
@@ -33,7 +33,7 @@ body{
     top: 34%;
     left:50%;
     transform: translate(-50%,-50%);
-    color: #0F4C75;
+    color: #1b98f2;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
 }
@@ -53,15 +53,15 @@ body{
     top: 150%;
     left:50%;
     transform: translate(-50%,-50%);
-    width: 100px;
+    width: 120px;
     height: 30px;
     border-radius: 1em;
     border: none;
-    background: #3282B8;
-    color: white;
+    background: #1b98f2;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    box-shadow: 0 0.1px 10px #000000;
+    box-shadow: 0 0.1px 10px #1b98f2;
 }
 input{
     width: 200px;
