@@ -1,0 +1,120 @@
+:root {
+    --main-color: #1b98f2;
+    --secondary-color: #0F4C75;
+    --background-color: #3282B8;
+    --backing-image: url('bck.png');
+}
+
+.darkmode{
+    --main-color: #2e2ed1;
+    --secondary-color: #000063;
+    --background-color: #2e2ed1;
+    --backing-image: url('background_dark.png');
+}
+#darkmode{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#darkmode img{
+    fill:var(--main-color)
+}
+
+#darkmode img:last-child{
+    display: none;
+}
+.darkmode #darkmode img:first-child{
+    display: none;
+}
+
+.darkmode #darkmode img:last-child{
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    background: var(--backing-image) no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+.backnadpis{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+
+}
+
+.gbackgorud{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: solid 2px var(--secondary-color);
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.5px 20px #11000038;
+    backdrop-filter: blur(1px);
+
+}
+
+.login{
+    position: absolute;
+    top: 34%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: var(--main-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.submit-button{
+    position: absolute;
+    top: 150%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 30px;
+    border-radius: 1em;
+    border: none;
+    background: var(--main-color);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    box-shadow: 0 0.1px 10px var(--main-color);
+}
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 1em;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.1px 10px var(--background-color);
+    backdrop-filter: blur(1px);
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--secondary-color);
+}
