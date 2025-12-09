@@ -9,7 +9,7 @@
     top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
+    width: 7%;
     height: auto;
 }
 
@@ -32,13 +32,13 @@ body{
 }
 
 .gbackgorund{
-    margin-top: 50px;
+    margin-top: 13%;
     position: absolute;
-    top: 50%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50em ;
-    height: 38em;
+    height: 25em;
     border:solid var(--secondary-color) 3px;
     background: rgba( 255, 255, 255, 0.25 );
     backdrop-filter: blur(1px);
@@ -47,14 +47,14 @@ body{
 .topback{
     border: solid var(--secondary-color) 3px;
     width: 100vw;
-    height: 120px;
+    height: 5em;
     background: var(--main-color);
     padding: 0;
     margin: 0;
 }
 .about{
     position: absolute;
-    top: 4%;
+    top: 3%;
     left: 6%;
     font-family: "fantasy", sans-serif;
     color: white;
