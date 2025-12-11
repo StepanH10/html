@@ -3,13 +3,14 @@
     --secondary-color: #0F4C75;
     --background-color: #3282B8;
     --backing-image: url('bck.png');
+    --glass: rgba( 255, 255, 255, 0.1 );
 }
 .logo{
     position: absolute;
     top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: 7%;
+    width: 5%;
     height: auto;
 }
 
@@ -19,6 +20,37 @@
     --background-color: #2e2ed1;
     --backing-image: url('background_dark.png');
 }
+#darkmode{
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 5vh;
+    width: 2.5vw;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 1.5vw;
+    height: auto;
+}
+
+#darkmode img{
+    fill:var(--main-color)
+}
+
+#darkmode img:last-child{
+    display: none;
+}
+.darkmode #darkmode img:first-child{
+    display: none;
+}
+
+.darkmode #darkmode img:last-child{
+    display: block;
+}
+
 
 * {
     margin: 0;
@@ -34,31 +66,86 @@ body{
 .gbackgorund{
     margin-top: 13%;
     position: absolute;
-    top: 27%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50em ;
-    height: 25em;
-    border:solid var(--secondary-color) 3px;
+    width: 50vw ;
+    height: 80vh;
+    border:solid var(--secondary-color) 0.5vh;
     background: rgba( 255, 255, 255, 0.25 );
     backdrop-filter: blur(1px);
-    border-radius: 50px;
+    border-radius: 5vw ;
 }
 .topback{
-    border: solid var(--secondary-color) 3px;
+    border: solid var(--secondary-color) 0.2vw;
     width: 100vw;
-    height: 5em;
+    height: 10vh;
     background: var(--main-color);
     padding: 0;
     margin: 0;
 }
 .about{
     position: absolute;
-    top: 3%;
-    left: 6%;
+    top: 2%;
+    left: 10%;
     font-family: "fantasy", sans-serif;
     color: white;
-    font-size: 50px;
+    font-size: 3vw;
 
 }
 
+.alarmtype{
+    border-radius: 2vh;
+    position: absolute;
+    top: 3vw;
+    left: 11vh;
+    width: 40vw;
+    height: 20vh;
+    background: var(--glass) ;
+    border: solid;
+    border-color: var(--background-color 0.5);
+    backdrop-filter: blur(1px);
+}
+
+.alarmbutton{
+    background-color: var(--main-color);
+    width: 8vw;
+    height: 4vw;
+    font-size: 1vw;
+    border-radius: 1vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#terorista{
+    position: absolute;
+    top: 50%;
+}
+
+#place_selection{
+    border-radius: 2vh;
+    position: absolute;
+    top: 13vw;
+    left: 51vh;
+    width: 40vw;
+    height: 20vh;
+    background: var(--glass) ;
+    border: solid;
+    border-color: var(--background-color 0.5);
+    backdrop-filter: blur(1px);
+}
+
+
+
+
+
+.alarmbutton:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgb(0, 30, 255) 60%);
+  color: rgb(4, 4, 38);
+}
+
+button:active {
+  transform: scale(0.9);
+}
