@@ -4,13 +4,16 @@
     --background-color: #3282B8;
     --backing-image: url('bck.png');
     --glass: rgba( 255, 255, 255, 0.1 );
+    /* Ponecháno jako reference, pro responzivitu se používá rem */
+    --base-font-size: 16px; 
 }
 .logo{
     position: absolute;
     top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: 5%;
+    /* VW: Šířka loga je relativní k šířce okna */
+    width: 4vw; 
     height: auto;
 }
 
@@ -21,10 +24,11 @@
     --backing-image: url('background_dark.png');
 }
 #darkmode{
-    margin-top: 1%;
-    margin-left: 1%;
+    /* VH/VW: Rozměry ikony jsou relativní k velikosti okna */
+    margin-top: 1vh;
+    margin-left: 1vw;
     height: 5vh;
-    width: 2.5vw;
+    width: 5vh; 
     border-radius: 50%;
     background-color: var(--main-color);
     display: flex;
@@ -32,7 +36,8 @@
     align-items: center;
 }
 img {
-    width: 1.5vw;
+    /* VW: Velikost ikon vnořených uvnitř #darkmode je relativní k šířce okna */
+    width: 1.5vw; 
     height: auto;
 }
 
@@ -55,6 +60,7 @@ img {
 * {
     margin: 0;
     padding: 0; 
+    box-sizing: border-box; 
 }
 
 body{
@@ -64,19 +70,25 @@ body{
 }
 
 .gbackgorund{
-    margin-top: 13%;
+    /* VH/VW: Hlavní kontejner se škáluje s oknem */
+    margin-top: 13vh; 
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw ;
-    height: 80vh;
-    border:solid var(--secondary-color) 0.5vh;
+    width: 80vw; 
+    /* Max-width zajistí, že na velkých PC obrazovkách nebude příliš široký */
+    max-width: 500px; 
+    height: 80vh; 
+    /* VH: Tloušťka okraje relativní k výšce okna */
+    border:solid var(--secondary-color) 0.5vh; 
     background: rgba( 255, 255, 255, 0.25 );
     backdrop-filter: blur(1px);
-    border-radius: 5vw ;
+    /* VW: Poloměr zaoblení relativní k šířce okna */
+    border-radius: 5vw ; 
 }
 .topback{
+    /* VW/VH: Hlavička se škáluje s oknem */
     border: solid var(--secondary-color) 0.2vw;
     width: 100vw;
     height: 10vh;
@@ -90,29 +102,38 @@ body{
     left: 10%;
     font-family: "fantasy", sans-serif;
     color: white;
-    font-size: 3vw;
-
+    /* REM: Velikost písma definujeme v REM, aby byla čitelná na všech zařízeních */
+    font-size: 2.5rem; /* Původně 3.5vw, zafixováno pro lepší čitelnost */
+    /* Zde můžete použít Media Queries pro jemné doladění na mobilu */
 }
 
 .alarmtype{
+    /* % a VH: Rozměry relativní k rodiči a výšce okna */
     border-radius: 2vh;
     position: absolute;
-    top: 3vw;
-    left: 11vh;
-    width: 40vw;
-    height: 20vh;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    height: 20vh; 
     background: var(--glass) ;
     border: solid;
-    border-color: var(--background-color 0.5);
+    border-color: var(--background-color);
     backdrop-filter: blur(1px);
 }
 
 .alarmbutton{
     background-color: var(--main-color);
-    width: 8vw;
-    height: 4vw;
-    font-size: 1vw;
-    border-radius: 1vw;
+    /* VW: Šířka tlačítka v vw, ale s max-width */
+    width: 13vw; 
+    max-width: 120px; 
+    height: 5vw ;
+    max-height: 50px; 
+    /* REM: Velikost písma v REM, aby se nezmenšilo příliš na mobilu */
+    font-size: 1.1rem; 
+    max-font-size: 1.2rem;;
+    /* REM: Poloměr v REM */
+    border-radius: 0.5rem; 
     position: absolute;
     top: 5%;
     left: 5%;
@@ -120,32 +141,134 @@ body{
 
 #terorista{
     position: absolute;
-    top: 50%;
+    top: 50%; 
 }
-
 #place_selection{
+    /* % a VH: Rozměry relativní k rodiči a výšce okna */
     border-radius: 2vh;
     position: absolute;
-    top: 13vw;
-    left: 51vh;
-    width: 40vw;
+    top: 25%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
     height: 20vh;
     background: var(--glass) ;
     border: solid;
-    border-color: var(--background-color 0.5);
+    border-color: var(--background-color);
     backdrop-filter: blur(1px);
 }
 
 
-
-
-
 .alarmbutton:hover {
-  background: rgb(2,29,78);
-  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgb(0, 30, 255) 60%);
-  color: rgb(4, 4, 38);
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgb(0, 30, 255) 60%);
+    color: rgb(4, 4, 38);
 }
 
 button:active {
-  transform: scale(0.9);
+    /* Ponecháno jako fixní hodnota */
+    transform: scale(0.9);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+/* Checkboxy: Využití REM je zde klíčové pro čitelnost a klikatelnost. */
+
+.customCheckBox {
+    /* REM: Odsazení a okraje v REM */
+    margin-top: 1rem;
+    margin-left: 1rem; 
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    
+    /* REM: Padding */
+    padding: 0.2rem 0.5rem; 
+    background-color: var(--secondary-color);
+    
+    /* REM: Border-radius */
+    border-radius: 0.3rem; 
+    color: rgba(0, 0, 0, 0.7);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    transition-duration: 300ms;
+    transition-property: color, background-color, box-shadow;
+    display: flex;
+    
+    /* REM: Výška */
+    height: 2.5rem; 
+    align-items: center;
+    
+    /* Stíny: Převedeno na REM */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.125rem 0.0625rem 0px inset, rgba(255, 255, 255, 0.17) 0px 0.0625rem 0.0625rem 0px;
+    outline: none;
+    justify-content: center;
+    
+    /* REM: Minimální šířka */
+    min-width: 4rem; 
+}
+
+.customCheckBox:hover {
+    background-color: #2c2c2c;
+    color: white;
+    
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -0.25rem 0.0625rem 0px inset, rgba(255, 255, 255, 0.17) 0px -0.0625rem 0.0625rem 0px, rgba(0, 0, 0, 0.17) 0px 0.125rem 0.25rem 0.0625rem;
+}
+
+.customCheckBox .inner {
+    /* REM: Velikost písma */
+    font-size: 1rem; 
+    font-weight: 900;
+    pointer-events: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 300ms;
+    transition-property: transform;
+    
+    transform: translateY(0); 
+}
+
+.customCheckBox:hover .inner {
+    /* REM: Transformace */
+    transform: translateY(-0.1rem);
+}
+
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+    /* REM: Border-radius */
+    border-bottom-left-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+    /* REM: Border-radius */
+    border-bottom-right-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    border-left: 0px;
+}
+
+.customCheckBoxInput {
+    display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+    background-color: red;
+    color: white;
+    
+    box-shadow: rgba(0, 0, 0, 0.23) 0px -0.25rem 0.0625rem 0px inset, rgba(255, 255, 255, 0.17) 0px -0.0625rem 0.0625rem 0px, rgba(0, 0, 0, 0.17) 0px 0.125rem 0.25rem 0.0625rem;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+    transform: translateY(-0.1rem);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+    background-color: red;
+    
+    box-shadow: rgba(0, 0, 0, 0.26) 0px -0.25rem 0.0625rem 0px inset, rgba(255, 255, 255, 0.17) 0px -0.0625rem 0.0625rem 0px, rgba(0, 0, 0, 0.15) 0px 0.1875rem 0.375rem 0.125rem;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+    transform: translateY(-0.1rem);
 }
