@@ -131,7 +131,7 @@ body{
     max-height: 50px; 
     /* REM: Velikost písma v REM, aby se nezmenšilo příliš na mobilu */
     font-size: 1.1rem; 
-    max-font-size: 1.2rem;;
+    max-font-size: 1.2rem;
     /* REM: Poloměr v REM */
     border-radius: 0.5rem; 
     position: absolute;
