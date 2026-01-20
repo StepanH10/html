@@ -1,0 +1,33 @@
+:root{
+    --main-color: #1b98f2;
+    --secondary-color: #0F4C75;
+    --text-color: #4988C4;
+        
+}
+
+body{
+    background-image : linear-gradient(to right,#1C4D8D, #0f4c75);
+}
+
+.background{
+    background-color: #BDE8F5;
+    width: 20vw;
+    height: 60vh;
+    border-radius: 10%;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    box-shadow:  10px 10px #0F2854;
+}
+
+.login{ 
+    font-size: 3em;
+    color: var(--text-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow:  1px 1px #0f4c75;
+    font-weight: 900;
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
