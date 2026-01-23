@@ -3,65 +3,76 @@
     --secondary-color: #0F4C75;
     --background-color: #3282B8;
     --backing-image: url('bck.png');
+    --black: #0c5c91;
 }
 
-.darkmode{
+.darkmode {
     --main-color: #2e2ed1;
     --secondary-color: #000063;
     --background-color: #2e2ed1;
     --backing-image: url('background_dark.png');
+    --black: #0d0dc5;
 }
-#darkmode{
+
+#darkmode {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     height: 3em;
     width: 3em;
     border-radius: 50%;
-    background-color: var(--main-color);
+    background-color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-#darkmode img{
-    fill:var(--main-color)
+#darkmode img {
+    fill: var(--main-color)
 }
 
-#darkmode img:last-child{
+#darkmode img:last-child {
     display: none;
 }
-.darkmode #darkmode img:first-child{
+
+.darkmode #darkmode img:first-child {
     display: none;
 }
 
-.darkmode #darkmode img:last-child{
+.darkmode #darkmode img:last-child {
     display: block;
 }
 
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
-body{
+body {
     background: var(--backing-image) no-repeat center center fixed;
     background-size: cover;
 }
 
 
 
-.backnadpis{
+.backnadpis {
     width: 100%;
     height: 100px;
     margin: 0;
 
 }
 
-.gbackgorud{
-    width: 500px;
+.gbackgorud {
+    width: 90%;
+    max-width: 500px;
     height: 400px;
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: solid 2px var(--secondary-color);
     border-radius: 1em;
     background: rgba(255, 255, 255, 0.5);
@@ -70,31 +81,37 @@ body{
 
 }
 
-.login{
+.login {
     position: absolute;
     top: 20%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--main-color);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
+    font-size: 4rem;
 }
 
-.form{
+.form {
     position: absolute;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 3rem;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
 }
 
-.submit-button{
-    position: absolute;
-    top: 150%;
-    left:50%;
-    transform: translate(-50%,-50%);
+.submit-button {
+
+    display: block;
+    margin: 2rem auto 0 auto;
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
     width: 120px;
     height: 30px;
     border-radius: 1em;
@@ -105,9 +122,12 @@ body{
     font-size: 15px;
     box-shadow: 0 0.1px 10px var(--main-color);
 }
-input{
-    width: 200px;
+
+input {
+    width: 100%;
+    max-width: 300px;
     height: 40px;
+    box-sizing: border-box;
     border-radius: 1em;
     border: none;
     background: rgba(255, 255, 255, 0.5);
@@ -117,4 +137,43 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: var(--secondary-color);
+}
+
+/* 📱 MOBILE RESPONSIVENESS FOR LOGIN */
+@media (max-width: 600px) {
+
+
+    .gbackgorud {
+        height: 40vh;
+        /* Menší výška kontejneru */
+    }
+    .login {
+        font-size: 3rem;
+        /* Menší nadpis */
+        top: 10%;
+    }
+
+    .form {
+        width: 90%;
+        font-size: 1.5rem;
+        /* Upravení velikosti textu */
+    }
+
+    input {
+        margin-top: 2vh;
+        font-size: 16px;
+        /* Zabraňuje zoomování na iPhonech */
+        height: 50px;
+        /* Vyšší pole pro snadnější kliknutí */
+        margin-bottom: 1rem;
+        /* Více místa mezi poli */
+    }
+
+    .submit-button {
+        width: 50%;
+        height: 45px;
+        /* Vyšší tlačítko */
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
 }
