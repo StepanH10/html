@@ -8,10 +8,7 @@
 }
 
 .logo {
-    position: absolute;
-    top: 0%;
-    left: 50vw;
-    transform: translateX(-50%);
+    transform: translateX(1vw);
     width: 4.5vw;
     height: auto;
 }
@@ -24,7 +21,9 @@
 }
 
 #darkmode {
-    /* VH/VW: Rozměry ikony jsou relativní k velikosti okna */
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
     margin-top: 1vh;
     margin-left: 1vw;
     height: 5vh;
@@ -37,7 +36,6 @@
 }
 
 img {
-    /* VW: Velikost ikon vnořených uvnitř #darkmode je relativní k šířce okna */
     width: 2vw;
     height: auto;
 }
@@ -64,6 +62,7 @@ img {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'TikTok Sans', sans-serif;
 }
 
 body {
@@ -78,25 +77,18 @@ body {
 }
 
 
-
-
-
 .gbackgorund {
-    /* VH/VW: Hlavní kontejner se škáluje s oknem */
     margin-top: 13vh;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
-    /* Max-width zajistí, že na velkých PC obrazovkách nebude příliš široký */
     max-width: 500px;
     height: 80vh;
-    /* VH: Tloušťka okraje relativní k výšce okna */
     border: solid var(--secondary-color) 0.5vh;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(1px);
-    /* VW: Poloměr zaoblení relativní k šířce okna */
     border-radius: 5vw;
 }
 
@@ -110,20 +102,28 @@ body {
     margin: 0;
 }
 
-.about {
-    position: absolute;
-    top: 2%;
-    left: 10%;
-    font-family: "fantasy", sans-serif;
-    color: white;
-    /* REM: Velikost písma definujeme v REM, aby byla čitelná na všech zařízeních */
-    font-size: 2.5rem;
-    /* Původně 3.5vw, zafixováno pro lepší čitelnost */
-    /* Zde můžete použít Media Queries pro jemné doladění na mobilu */
+#header_back {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    border-radius: 100vh;
+
 }
 
+.headers {
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: var(--secondary-color) 4px 4px 1px;
+    font-family: "fantasy", sans-serif;
+    color: white;
+}
+
+ /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
 .alarmtype {
-    /* % a VH: Rozměry relativní k rodiči a výšce okna */
     border-radius: 2vh;
     position: absolute;
     top: 5vh;
@@ -135,29 +135,19 @@ body {
     border: solid;
     border-color: var(--background-color);
     backdrop-filter: blur(1px);
-
-    /* Flexbox pro zarovnání tlačítek */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 1vh;
-    /* Přidán padding pro lepší vzhled */
-
-    /* Scrollable behavior */
     overflow-y: scroll;
     box-shadow: var(--secondary-color) 12px 8px 3px;
-
-    /* Hide scrollbar */
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE and Edge */
 }
 
 .alarmtype::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 
@@ -268,38 +258,26 @@ body {
 /* Checkboxy: Využití REM je zde klíčové pro čitelnost a klikatelnost. */
 
 .customCheckBox {
-    /* REM: Odsazení a okraje v REM */
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
     width: fit-content;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     user-select: none;
-
-    /* REM: Padding */
     padding: 0.2rem 0.5rem;
     background-color: var(--secondary-color);
-
-    /* REM: Border-radius */
     border-radius: 0.3rem;
     color: white;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-
     transition-duration: 300ms;
     transition-property: color, background-color, box-shadow;
     display: flex;
-
-    /* REM: Výška */
     height: 2.5rem;
     align-items: center;
-
-    /* Stíny: Převedeno na REM */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0.125rem 0.0625rem 0px inset, rgba(255, 255, 255, 0.17) 0px 0.0625rem 0.0625rem 0px;
     outline: none;
     justify-content: center;
-
-    /* REM: Minimální šířka */
     min-width: 4rem;
 }
 
@@ -311,7 +289,6 @@ body {
 }
 
 .customCheckBox .inner {
-    /* REM: Velikost písma */
     font-size: 1rem;
     font-weight: 900;
     pointer-events: none;
@@ -383,7 +360,7 @@ body {
     position: absolute;
     bottom: 30vh;
     left: 50%;
-    top: 78vh;
+    top: 81vh;
     transform: translateX(-50%);
 }
 
@@ -477,14 +454,14 @@ body {
 
 
 /* ---------------------------------------------------------SUBMIT BUTTON----------------------------------------------------------------- */
-.sub_butt{
+.sub_butt {
     position: absolute;
     top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#submit_button{
+#submit_button {
     width: 150px;
     height: 50px;
     border-radius: 25px;
@@ -496,12 +473,12 @@ body {
     box-shadow: var(--secondary-color) 12px 8px 3px;
 }
 
-#submit_button:hover{
-    background: rgb(2,29,78);
-    background: linear-gradient(270deg, rgba(2,29,78,0.681) 0%, rgb(0,30,255) 60%);
+#submit_button:hover {
+    background: rgb(2, 29, 78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgb(0, 30, 255) 60%);
 }
 
-.titles{
+.titles {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -512,17 +489,55 @@ body {
     text-shadow: var(--background-color) 3px 3px 2px;
 }
 
-#place_type{
+#place_type {
     top: 27vh;
 }
 
-#group_selection{
+#group_selection {
     top: 54vh;
     white-space: nowrap;
     font-size: 1.5rem;
 }
 
+.glass_group_selection {
+    border-radius: 2vh;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 8vh;
+    background: var(--glass);
+    border: solid;
+    border-color: var(--background-color);
+    backdrop-filter: blur(1px);
+    box-shadow: var(--secondary-color) 12px 8px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
+}
+
+
+
+.radio_group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+}
+
+.radio_group::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
 
 /* -------------------------------------------------------------------------------------------------------------------------- */
 /* Media Queries for Mobile */
@@ -531,13 +546,13 @@ body {
 
     /* Header adjustments */
     .topback {
-        height: auto;
-        min-height: 7vh;
         display: flex;
         align-items: center;
-        padding: 1vh 2vw;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: start;
+    }
+    .headers {
+        font-size: 1rem;
     }
 
     .about {
@@ -547,15 +562,10 @@ body {
     }
 
     .logo {
-        position: absolute;
-        top: 3.5vh;
-        left: 50%;
-        transform: translate(-50%, -50%);
         /* Let it flow */
-        width: 15vw;
-        max-width: 50px;
-        order: 2;
-        /* Center visually if needed, or just let it be */
+        width: 25vw;
+        max-width: 70px;
+        height: auto;
     }
 
     img {
@@ -569,25 +579,24 @@ body {
         order: 3;
     }
 
-    /* Main Container adjustments */
+
     .gbackgorund {
-        margin-top: 0%;
-        width: 95vw;
+        margin-top: 1vh;
+        width: 90vw;
         max-width: none;
-        height: auto;
+        height: 20vh;
         min-height: 80vh;
-        top: 50%;
-        /* Push down a bit */
-        padding-bottom: 5vh;
+        top: 50vh;
+
     }
 
-    /* Alarm Section */
+
     .alarmtype {
         height: 20vh;
         min-height: 10vh;
         width: 90%;
         position: relative;
-        top: 7vh;
+        top: 4.5vh;
         margin-bottom: 2vh;
     }
 
@@ -598,10 +607,10 @@ body {
         font-size: 1rem;
     }
 
-    /* Bottom Controls */
+
     #place_selection {
         position: relative;
-        top: 9vh;
+        top: 5vh;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
@@ -611,35 +620,62 @@ body {
         align-items: center;
         padding: 2vh;
     }
-    
-    
-    .titles{
+
+
+    .titles {
         white-space: nowrap;
         top: 0vh;
+        font-size: 1.5rem;
     }
 
+    #alarm_type {
+        top: 0vh;
+    }
 
     .messageBox {
         width: 70vw;
         height: 40px;
-        top: 77%;
+        top: 77vh;
     }
 
-    .sub_butt{
+    .sub_butt {
         top: 95%;
     }
 
-    #place_type{
-        top: 28vh;
+    #place_type {
+        top: 26vh;
     }
-    
-    #group_selection{
-        top: 55vh;
+
+    #group_selection {
+        top: 51vh;
         white-space: nowrap;
         font-size: 1.5rem;
     }
 
+    .glass_group_selection {
+        top: 75%;
+        height: 8vh;
+    }
+
+    .glass_group_selection {
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .radio_group {
+        align-items: center;
+        justify-content: center;
+        gap: 0rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .radio{
+        font-size: 10px;
+    }
+    .alarmRadioBox .inner {
+        font-size: 15px;
+    }
+
 
 }
-
-
