@@ -513,30 +513,28 @@ body {
     backdrop-filter: blur(1px);
     box-shadow: var(--secondary-color) 12px 8px 3px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1vh;
-    overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-
 }
-
-
 
 .radio_group {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 0.1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 3fr);
+    gap: 1rem;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
+
+
 
 .radio_group::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------- */
@@ -573,9 +571,10 @@ body {
     }
 
     #darkmode {
-        margin: 0;
-        width: 7vw;
-        height: 7vw;
+        margin-top: 0.1vh;
+        margin-left: 5vw;
+        width: 6vw;
+        height: 6vw;
         order: 3;
     }
 
@@ -664,11 +663,7 @@ body {
     }
 
     .radio_group {
-        align-items: center;
-        justify-content: center;
         gap: 0rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
     }
     .radio{
         font-size: 10px;

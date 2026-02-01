@@ -21,3 +21,9 @@ darkmodeToggle.addEventListener("click", () => {
     darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
 
+const scrollContainer = document.querySelector(".radio_group");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
