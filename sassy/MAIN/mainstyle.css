@@ -78,6 +78,11 @@ body {
 
 
 .gbackgorund {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
     margin-top: 13vh;
     position: absolute;
     top: 40%;
@@ -124,11 +129,8 @@ body {
  /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .alarmtype {
+    order: 2;
     border-radius: 2vh;
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
     height: 20vh;
     background: var(--glass);
@@ -223,14 +225,10 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------------- */
 
 #place_selection {
+    order: 4;
     border-radius: 2vh;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
     height: 20vh;
-    /* Flexbox pro zarovnání tlačítek */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vh;
@@ -242,11 +240,8 @@ body {
     border-color: var(--background-color);
     backdrop-filter: blur(1px);
     overflow-y: scroll;
-    /* Hide scrollbar */
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE and Edge */
 }
 
 #place_selection::-webkit-scrollbar {
@@ -349,6 +344,7 @@ body {
 /* Message Box Styling */
 
 .messageBox {
+    order: 7;
     width: 15vw;
     height: 40px;
     display: flex;
@@ -358,11 +354,6 @@ body {
     padding: 0 15px;
     border-radius: 10px;
     border: 1px solid var(--background-color);
-    position: absolute;
-    bottom: 30vh;
-    left: 50%;
-    top: 81vh;
-    transform: translateX(-50%);
 }
 
 .messageBox:focus-within {
@@ -421,8 +412,6 @@ body {
 }
 
 .tooltip {
-    position: absolute;
-    top: -40px;
     display: none;
     opacity: 0;
     color: white;
@@ -456,10 +445,8 @@ body {
 
 /* ---------------------------------------------------------SUBMIT BUTTON----------------------------------------------------------------- */
 .sub_butt {
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    order: 8;
+
 }
 
 #submit_button {
@@ -480,9 +467,6 @@ body {
 }
 
 .titles {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-family: "fantasy", sans-serif;
     color: white;
     font-size: 2rem;
@@ -491,21 +475,18 @@ body {
 }
 
 #place_type {
-    top: 27vh;
+    order: 3;
 }
 
 #group_selection {
-    top: 54vh;
+    order: 5;
     white-space: nowrap;
     font-size: 1.5rem;
 }
 
 .glass_group_selection {
+    order: 5;
     border-radius: 2vh;
-    position: absolute;
-    top: 78%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90%;
     height: 8vh;
     background: var(--glass);
@@ -533,8 +514,6 @@ body {
     scroll-snap-type: y mandatory;
 
 }
-
-
 
 .radio_group::-webkit-scrollbar {
     display: none;
@@ -583,6 +562,7 @@ body {
 
 
     .gbackgorund {
+        gap: 1vh;
         margin-top: 1vh;
         width: 90vw;
         max-width: none;
@@ -597,9 +577,6 @@ body {
         height: 20vh;
         min-height: 10vh;
         width: 90%;
-        position: relative;
-        top: 4.5vh;
-        margin-bottom: 2vh;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         justify-items: center;
@@ -611,57 +588,46 @@ body {
     .alarmbutton {
         width: 45%;
         height: 60px;
-        margin: 1vh 1%;
         font-size: 1rem;
     }
 
 
     #place_selection {
-        position: relative;
-        top: 5vh;
-        left: 50%;
-        transform: translateX(-50%);
         width: 90%;
-        margin-top: 5vh;
         height: 20vh;
         min-height: 15vh;
-        padding: 2vh;
-        gap: 0px;
     }
 
 
     .titles {
         white-space: nowrap;
-        top: 0vh;
         font-size: 1.5rem;
     }
 
     #alarm_type {
-        top: 0vh;
+
     }
 
     .messageBox {
         width: 70vw;
         height: 40px;
-        top: 77vh;
+
     }
 
     .sub_butt {
-        top: 95%;
+
     }
 
     #place_type {
-        top: 26vh;
+
     }
 
     #group_selection {
-        top: 51vh;
         white-space: nowrap;
         font-size: 1.5rem;
     }
 
     .glass_group_selection {
-        top: 75%;
         height: 8vh;
     }
 
@@ -672,7 +638,7 @@ body {
     }
 
     .radio_group {
-        gap: 0.5rem;
+
     }
     .radio{
         font-size: 10px;
