@@ -69,6 +69,11 @@ body {
 }
 
 .gbackgorud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
     margin-top: 13vh;
     position: absolute;
     top: 35%;
@@ -86,10 +91,6 @@ body {
 
 
 .login {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
     font-size: 4rem;
     font-weight: 900;
@@ -97,10 +98,6 @@ body {
 }
 
 .form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
     font-size: 3rem;
     width: 80%;
@@ -109,7 +106,6 @@ body {
 }
 
 .submit-button {
-    margin-top: 6vh;
     width: 150px;
     height: 50px;
     border-radius: 25px;
@@ -147,11 +143,11 @@ input {
     .gbackgorud {
         height: 40vh;
         border-radius: 10vw;
+        gap: 2vh;
     }
     .login {
-        font-size: 3rem;
+        font-size: 4rem;
         /* Menší nadpis */
-        top: 10%;
     }
 
     .form {
@@ -172,6 +168,5 @@ input {
         height: 45px;
         /* Vyšší tlačítko */
         font-size: 1.2rem;
-        margin-top: 2rem;
     }
 }
