@@ -1,0 +1,131 @@
+:root {
+    --main-color: #1b98f2;
+    --secondary-color: #0F4C75;
+    --background-color: #3282B8;
+    --backing-image: url('bck.png');
+    --glass: rgba(255, 255, 255, 0.1);
+    --base-font-size: 16px;
+}
+
+*{
+    padding: 0%;
+    margin: 0;
+}
+
+.darkmode {
+    --main-color: #2e2ed1;
+    --secondary-color: #00009c;
+    --background-color: #2e2ed1;
+    --backing-image: url('background_dark.png');
+}
+body {
+    background: var(--backing-image) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo {
+    width: 4.5vw;
+    height: auto;
+}
+
+#darkmode {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 2vw;
+    height: auto;
+}
+
+#darkmode img {
+    fill: var(--main-color)
+}
+
+#darkmode img:last-child {
+    display: none;
+}
+
+.darkmode #darkmode img:first-child {
+    display: none;
+}
+
+.darkmode #darkmode img:last-child {
+    display: block;
+}
+
+.topback {
+    border: solid var(--secondary-color) 0.2vw;
+    width: 100vw;
+    height: 10vh;
+    background: var(--main-color);
+    padding: 0;
+    margin: 0;
+}
+
+#header_back {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    border-radius: 100vh;
+
+}
+
+.headers {
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: var(--secondary-color) 4px 4px 1px;
+    font-family: "fantasy", sans-serif;
+    color: white;
+}
+
+.gbackgorund {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 13vh;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 500px;
+    height: 80vh;
+    border: solid var(--secondary-color) 0.5vh;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1px);
+    border-radius: 5vw;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: var(--secondary-color) 4px 4px 1px;
+    font-family: "fantasy", sans-serif;
+    margin: 2vw;
+    color: white;
+}
+
+.paragraph{
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: var(--secondary-color) 4px 4px 1px;
+    font-family: "fantasy", sans-serif;
+    color: white;
+    margin: 0.5vw;
+}
