@@ -1,0 +1,154 @@
+body{
+    background-image: url("background.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.batn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: auto;
+    border-radius: 100%;
+}
+.batn:hover{
+    box-shadow: red 1px 1px 100px;
+    height: 52vh;
+    width: 45vw;
+}
+.batn:active{
+    background-color: green;  
+    border-color: green;
+    height: 42vh;
+    width: 40vw;
+}
+
+#couter{
+    color: blue;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#branikos{
+    height: 40vh;
+    width: 30vw;
+}
+
+#shop_img{
+    width: 5vw;
+    height: 5vh;
+}
+
+#shop_div{
+    display: none;
+    height: 50vh;
+    width: 50vw;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: blue 1px 1px 10px;
+}
+
+#ketamine_upgrade{
+    background-color: red;
+    margin: 10px;
+    border: none;
+}
+
+#unicorn{
+    width: 10vw;
+    height: 10vh;
+    margin: 1vh;
+    border-radius: 20px;
+    box-shadow: purple 1px 1px 70px;
+}
+#unicorn:hover{
+    width: 11vw;
+    height: 11vh;
+
+}
+#unicorn:active{
+    width: 9vw;
+    height: 9vh;
+}
+#ketamine_counter{
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    width: 10vw;
+    height: 10vh;
+}
+#skin_shop{
+    width: 7vw;
+    height: 7vh;
+    position: absolute;
+    top: 1vh;
+    left: 92vw;
+    align-items: center;
+}
+#skin_shop_img{
+    width: 5vw;
+    height: 5vh;
+}
+#skin_shop_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vw;
+    background-color: green;
+    display: none;
+
+}
+#wide_branikos{
+    margin: 2%;
+    width: 10vw;
+    height: 10vh;
+
+}
+#wide_branikos_img{
+    width: 10vw;
+    height: 10vh;
+}
+#original_branikos{
+    margin: 2%;
+    width: 10vw;
+    height: 10vh;    
+}
+#original_branikos_img{
+    width: 10vw;
+    height: 10vh;
+
+}
+#autoclicker{
+    border: none;
+    position: absolute;
+    top: 2vh;
+    width: 10vw;
+    height: 10vh;
+    border-radius: 20px;
+    box-shadow: purple 1px 1px 70px;
+    align-items: center;
+    background-color: red;
+    
+}
+#autoclicker_img{
+    width: 9vw;
+    height: 9vh;
+    border-radius: 20px;
+    box-shadow: purple 1px 1px 70px;   
+}
+
+#autoclicker:hover{
+    width: 12vw;
+    height: 12vh;
+}
