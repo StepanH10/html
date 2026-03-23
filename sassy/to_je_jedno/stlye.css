@@ -1,0 +1,85 @@
+:root {
+    --main-color: #1b98f2;
+    --secondary-color: #0F4C75;
+    --background-color: #3282B8;
+    --backing-image: url('bck.png');
+    --glass: rgba(255, 255, 255, 0.1);
+    --base-font-size: 16px;
+}
+
+.logo {
+    transform: translateX(1vw);
+    width: 4.5vw;
+    height: auto;
+}
+
+.darkmode {
+    --main-color: #2e2ed1;
+    --secondary-color: #00009c;
+    --background-color: #2e2ed1;
+    --backing-image: url('background_dark.png');
+}
+
+#darkmode {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 2vw;
+    height: auto;
+}
+
+#darkmode img {
+    fill: var(--main-color)
+}
+
+#darkmode img:last-child {
+    display: none;
+}
+
+.darkmode #darkmode img:first-child {
+    display: none;
+}
+
+.darkmode #darkmode img:last-child {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'TikTok Sans', sans-serif;
+}
+
+body {
+    background: var(--backing-image) no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.headers{
+    color: white;
+    margin-top: 2.3vh;
+    font-weight: 900;
+    
+}
+.topback{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    background-color: var(--main-color);
+    border: solid var(--secondary-color) 0.2vw;
+    border-radius: 1vh;
+}
