@@ -47,7 +47,30 @@
             alert("NOT ENOUGH MONEY")
         }
     };
-    
+
+    const autoclickerButton = document.getElementById("autoclicker")
+    const autoclickerCounter = document.getElementById("autoclicker_counter")
+    let autoclickerCount = 0
+    let autoclickerSpeed = 1000
+    let autoclickerChech = false
+
+    autoclickerButton.onclick = function(){
+        if (clicker >= 500){
+            clicker = clicker - 500
+            counter.innerText = clicker
+            autoclickerCount++
+            autoclickerCounter.innerText = autoclickerCount
+            autoclickerChech = true
+        }
+    }
+    function autoclickerFunc(){
+        clicker = clicker + autoclickerCount
+        counter.innerText = clicker
+    }
+
+
+    setInterval(autoclickerFunc, autoclickerSpeed)
+
 //-----------------------------SKIN SHOP -------------------------------------------
     const skinShopButton = document.getElementById("skin_shop")
     const skinShopDiv = document.getElementById("skin_shop_div")

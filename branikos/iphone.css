@@ -152,3 +152,9 @@ body{
     width: 12vw;
     height: 12vh;
 }
+
+#autoclicker_counter{
+    position: absolute;
+    top: 9vh;
+    left: 18vw;
+}
