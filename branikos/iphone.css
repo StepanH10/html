@@ -1,10 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body{
     background-image: url("background.png");
     background-size: cover;
     overflow: hidden;
 }
-
-
 .batn{
     position: absolute;
     top: 50%;
@@ -59,14 +63,13 @@ body{
 
 #ketamine_upgrade{
     background-color: red;
-    margin: 10px;
     border: none;
+    order: 1;
 }
 
 #unicorn{
     width: 10vw;
     height: 10vh;
-    margin: 1vh;
     border-radius: 20px;
     box-shadow: purple 1px 1px 70px;
 }
@@ -80,12 +83,54 @@ body{
     height: 9vh;
 }
 #ketamine_counter{
-    position: absolute;
-    top: 10vh;
-    left: 5vw;
+    order: 4;
+}
+
+#autoclicker{
+    border: none;
     width: 10vw;
     height: 10vh;
+    border-radius: 20px;
+    background-color: none;
+    order: 2;
+    justify-content: center;
 }
+#autoclicker_img{
+    width: 10vw;
+    height: 10vh;
+    border-radius: 20px;
+}
+
+#autoclicker:hover{
+    width: 11vw;
+    height: 11vh;
+}
+
+#autoclicker_counter{
+    color: blue;
+    order: 5;
+}
+#shop_div_grid{
+    height: 0vh;
+    width: 30vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 10px;
+}
+#bluep_upgrade{
+    width: 10vw;
+    height: 10vh;
+
+}
+
+#bluep_upgrade_img{
+    width: 10vw;
+    height: 10vh;
+    order: 3;
+}
+
+/* SKIN SHOp */
 #skin_shop{
     width: 7vw;
     height: 7vh;
@@ -128,33 +173,4 @@ body{
     width: 10vw;
     height: 10vh;
 
-}
-#autoclicker{
-    border: none;
-    position: absolute;
-    top: 2vh;
-    width: 10vw;
-    height: 10vh;
-    border-radius: 20px;
-    box-shadow: purple 1px 1px 70px;
-    align-items: center;
-    background-color: red;
-    
-}
-#autoclicker_img{
-    width: 9vw;
-    height: 9vh;
-    border-radius: 20px;
-    box-shadow: purple 1px 1px 70px;   
-}
-
-#autoclicker:hover{
-    width: 12vw;
-    height: 12vh;
-}
-
-#autoclicker_counter{
-    position: absolute;
-    top: 9vh;
-    left: 18vw;
 }

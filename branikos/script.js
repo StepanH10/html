@@ -1,5 +1,5 @@
 // KLICKER COUNT A BUTTON
-    let upgrade = 100
+    let upgrade = 0
     let clicker = 0
     const counter = document.getElementById("couter")
     const tlacitko = document.getElementById('mojeTlacitko');
