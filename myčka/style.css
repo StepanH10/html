@@ -179,13 +179,31 @@ body {
     width: 80%;
 }
 
-.text {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 1.5em;
+.text_wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.socials{
+.text_wrap ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kontakt_text {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.socials {
     width: 20px;
     height: auto;
+}
+.mapa{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
 }
