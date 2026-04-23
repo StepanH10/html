@@ -11,16 +11,17 @@
 }
 
 a {
-    text-decoration: none;
-    color: var(--secundary_color);
-    font-weight: 900;
+  font-size: 1.5em; 
+  text-decoration: none;
+  color: var(--secundary_color);
+  font-weight: 900;
 }
+
 body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, black, var(--dark_blue) 80%);
     display: flex;
-
 }
 
 /* Side Panel */
@@ -28,16 +29,19 @@ body {
     height: 100vh;
     width: 350px;
     background: var(--black);
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
+
 .logo {
     padding-top: 50px;
     width: 100%;
     height: auto;
 }
+
 .nav_wrapper {
     width: 100%;
     height: 20vh;
@@ -47,106 +51,141 @@ body {
     justify-content: space-evenly;
 }
 
-.card {
-  width: 80%;
-  height: 20vh;
-  background-color: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px 25px;
-  gap: 20px;
+/* Nav link aktivní stav */
+.nav_wrapper .nav-link {
+    transition: color 0.3s;
 }
 
-/* for all social containers*/
+.nav_wrapper .nav-link.active {
+    color: #ffffff;
+    position: relative;
+}
+
+.nav_wrapper .nav-link.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--main_color);
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+.card {
+    width: 80%;
+    height: 20vh;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+}
+
+/* Social containers */
 .socialContainer {
-  width: 52px;
-  height: 52px;
-  border-radius: 5px;
-  background-color: rgb(44, 44, 44);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: 0.3s;
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
 }
-/* instagram*/
-.containerOne:hover {
-  background-color: #d62976;
-  transition-duration: 0.3s;
-}
-/* Tiktok*/
-.containerTwo:hover {
-  background-color: #25f4ee;
-  transition-duration: 0.3s;
-}
-/* Facebook*/
-.containerThree:hover {
-  background-color: #1877f2;
-  transition-duration: 0.3s;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: green;
-  transition-duration: 0.3s;
-}
+
+.containerOne:hover { background-color: #d62976; }
+.containerTwo:hover { background-color: #25f4ee; }
 
 .socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: 0.3s;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
 }
 
-.socialSvg {
-  width: 19px;
-}
-.largeIcon {
-  width: 27px; /* Ancho específico solo para el icono de TikTok */
-}
-.socialSvg path {
-  fill: rgb(255, 255, 255);
-}
+.socialSvg { width: 19px; }
+.largeIcon { width: 27px; }
+.socialSvg path { fill: rgb(255, 255, 255); }
 
 .socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
+    animation: slide-in-top 0.3s both;
 }
 
 @keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
+    0%   { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0);     opacity: 1; }
+}
+
+/* MAIN panely */
+.main_panel {
+    background: rgba(255, 255, 255, 0.02);
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+    box-shadow: var(--secundary_color) 1px 1px 10px;
+
+    display: none;
     opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    animation: none;
 }
 
-/* MAIN */
-.main_panel{
-  background: rgba(255, 255, 255, 0.02);
-  width: 90vw;
-  height: 90vh;
-  margin: 5vh;
-  border-radius: 20px;
-  backdrop-filter: blur(1px);
-  box-shadow: #010101;
-  box-shadow: var(--secundary_color) 1px 1px 10px;
+/* Aktivní panel */
+.main_panel.active_panel {
+    display: block;
+    animation: fadeIn 0.4s ease-out forwards;
 }
-.nadpis{
-  color:  rgb(255, 255, 255);
-  text-align: center;
-  margin-top: 40px;
-  font-weight: 900;
-  font-size: 4em;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
-.underline{
-  margin-top: 10px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 1px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1000px;
+
+/* Obsah panelu */
+.content_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+}
+
+.nadpis {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: 4em;
+}
+
+.underline {
+    width: 300px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 1000px;
+}
+
+.text_wrap {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.text {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.socials{
+    width: 20px;
+    height: auto;
 }
